@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Conferindo a Sorte - Lotofácil da Independência</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Conferindo a Sorte - Lotofácil da Independência</h1>
+    
+    <div class="sorteio-container">
+      <h2>Números Sorteados</h2>
+      <div class="input-container">
+        <input type="number" id="sorteio-number1" placeholder="0" min="1" max="25">
+        <input type="number" id="sorteio-number2" placeholder="0" min="1" max="25">
+        <input type="number" id="sorteio-number3" placeholder="0" min="1" max="25">
+        <input type="number" id="sorteio-number4" placeholder="0" min="1" max="25">
+        <input type="number" id="sorteio-number5" placeholder="0" min="1" max="25">
+        <input type="number" id="sorteio-number6" placeholder="0" min="1" max="25">
+        <input type="number" id="sorteio-number7" placeholder="0" min="1" max="25">
+        <input type="number" id="sorteio-number8" placeholder="0" min="1" max="25">
+        <input type="number" id="sorteio-number9" placeholder="0" min="1" max="25">
+        <input type="number" id="sorteio-number10" placeholder="0" min="1" max="25">
+        <input type="number" id="sorteio-number11" placeholder="0" min="1" max="25">
+        <input type="number" id="sorteio-number12" placeholder="0" min="1" max="25">
+        <input type="number" id="sorteio-number13" placeholder="0" min="1" max="25">
+        <input type="number" id="sorteio-number14" placeholder="0" min="1" max="25">
+        <input type="number" id="sorteio-number15" placeholder="0" min="1" max="25">
+      </div>
+    </div>
+
+    <div class="button-container">
+      <button id="random-game-button">Gerar Jogo Aleatório</button>
+      <button id="clear-button">Limpar</button>
+      <button id="list-all-games-button">Listar Nossos Jogos</button>
+      <button id="toggle-values-button">Exibir Valores</button>
+    </div>
+
+    <div class="values-section" id="values-section" style="display: none;">
+      <div class="summary-section" id="summary-section">
+        <h3>Resumo da Premiação</h3>
+        <div id="total-prize">Total Arrecadado: R$ 0,00</div>
+        <div id="prize-breakdown"></div>
+        <button id="toggle-prize-config-button">Ajustar Valores Estimados</button>
+      </div>
+
+      <div class="prizes-container" style="display: none;">
+        <h2>Valores dos Prêmios (por jogo)</h2>
+        <p class="prize-note">Atenção: Os valores abaixo são estimativas e servem apenas como referência. Você pode alterá-los.</p>
+        <div class="prize-inputs">
+          <div><label for="prize-11">11 acertos: R$</label> <input type="text" id="prize-11" value="7" inputmode="numeric"></div>
+          <div><label for="prize-12">12 acertos: R$</label> <input type="text" id="prize-12" value="14" inputmode="numeric"></div>
+          <div><label for="prize-13">13 acertos: R$</label> <input type="text" id="prize-13" value="35" inputmode="numeric"></div>
+          <div><label for="prize-14">14 acertos: R$</label> <input type="text" id="prize-14" value="2000" inputmode="numeric"></div>
+          <div><label for="prize-15">15 acertos: R$</label> <input type="text" id="prize-15" value="2500000" inputmode="numeric"></div>
+        </div>
+        <button id="update-prizes-button">Atualizar e Recalcular</button>
+      </div>
+    </div>
+
+    <div id="result-message">Digite os números sorteados ou gere um jogo aleatório para testar sua sorte!</div>
+    <div id="winning-games-section" style="display: none;">
+      <h2>Jogos com combinações das dezenas sorteadas:</h2>
+      <div class="results" id="results"></div>
+
+      <div class="output-section">
+        <div id="acertos-15-section" style="display: none;">
+          <h3>Prêmios com 15 acertos</h3>
+          <div id="total-15-acertos"></div>
+          <div id="acertos-15"></div>
+        </div>
+        <div id="acertos-14-section" style="display: none;">
+          <h3>Prêmios com 14 acertos</h3>
+          <div id="total-14-acertos"></div>
+          <div id="acertos-14"></div>
+        </div>
+        <div id="acertos-13-section" style="display: none;">
+          <h3>Prêmios com 13 acertos</h3>
+          <div id="total-13-acertos"></div>
+          <div id="acertos-13"></div>
+        </div>
+        <div id="acertos-12-section" style="display: none;">
+          <h3>Prêmios com 12 acertos</h3>
+          <div id="total-12-acertos"></div>
+          <div id="acertos-12"></div>
+        </div>
+        <div id="acertos-11-section" style="display: none;">
+          <h3>Prêmios com 11 acertos</h3>
+          <div id="total-11-acertos"></div>
+          <div id="acertos-11"></div>
+        </div>
+      </div>
+    </div>
+
+    <div id="all-games-container" style="display: none;" class="output-section">
+      <h3>Todos os Nossos Jogos</h3>
+      <div id="all-games"></div>
+    </div>
+
+    <script src="jogos.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
