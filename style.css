@@ -1,106 +1,132 @@
 /* GERAL E TIPOGRAFIA */
 body {
-  background: linear-gradient(135deg, #f0fff0 0%, #fffef0 100%); /* Gradiente suave verde/amarelo */
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%); /* Gradiente suave cinza-azulado */
   color: #333;
   font-family: 'Segoe UI', 'Roboto', Arial, sans-serif;
-  font-size: 18px; /* Fonte base menor para um look mais limpo */
+  font-size: 16px; /* Fonte base ajustada para melhor legibilidade */
+  line-height: 1.6;
   text-align: center;
   padding: 20px;
-  padding-top: 25px; /* Espaço para a barra superior */
+  padding-top: 30px; /* Espaço para a barra superior */
+  margin: 0;
 }
 
 h1 {
-  font-size: 36px;
+  font-size: 32px;
   margin-bottom: 20px;
   color: #fff;
-  background: linear-gradient(90deg, #009B3A 0%, #FFCC29 100%); /* Verde e Amarelo */
+  background: linear-gradient(90deg, #003399 0%, #0066CC 100%); /* Azul institucional */
   border-radius: 8px;
   padding: 15px 0;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
-  letter-spacing: 1.5px;
-  text-shadow: 1px 1px 3px #002776; /* Sombra azul */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  letter-spacing: 1px;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+  font-weight: 600;
 }
 
 h2 {
-  font-size: 24px;
+  font-size: 22px;
   margin-bottom: 15px;
-  color: #002776; /* Azul */
-  text-shadow: none;
+  color: #003399; /* Azul escuro */
+  font-weight: 500;
 }
 
 /* CONTAINERS PRINCIPAIS */
 .sorteio-container {
-  background: rgba(255, 255, 255, 0.9);
+  background: rgba(255, 255, 255, 0.95);
   border: 1px solid #ddd;
   border-radius: 12px;
-  padding: 24px;
-  margin: 24px auto;
-  max-width: 800px; /* Aumentado para comportar 15 números */
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+  margin: 30px auto;
+  max-width: 800px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.08);
 }
 
 /* ENTRADAS DE NÚMEROS (INPUTS) */
 .input-container {
   display: flex;
   justify-content: center;
-  flex-wrap: wrap; /* Permite quebra de linha em telas menores */
-  gap: 10px;
-  margin-bottom: 24px;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 30px;
 }
 
 input[type="number"] {
-  width: 50px; /* Reduzido para caber mais inputs */
+  width: 50px;
   height: 50px;
-  font-size: 22px;
+  font-size: 20px;
   text-align: center;
-  border: 2px solid #FFCC29; /* Amarelo */
+  border: 2px solid #ccc;
   border-radius: 8px;
   background: #fff;
-  color: #002776; /* Azul */
-  font-weight: bold;
-  transition: border-color 0.2s, box-shadow 0.2s;
+  color: #003399;
+  font-weight: 500;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
 input[type="number"]:focus {
   outline: none;
-  border-color: #009B3A; /* Verde */
-  box-shadow: 0 0 8px rgba(0, 155, 58, 0.3);
+  border-color: #0066CC;
+  box-shadow: 0 0 8px rgba(0, 102, 204, 0.2);
+}
+
+/* Remove as setas de incremento/decremento dos inputs numéricos */
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type="number"] {
+  appearance: textfield;
+  -moz-appearance: textfield;
 }
 
 /* BOTÕES */
 .button-container {
-  margin: 24px 0;
+  margin: 30px 0;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 15px;
 }
 
 button {
   padding: 12px 24px;
-  font-size: 18px;
-  background: #009B3A; /* Verde sólido */
+  font-size: 16px;
+  background: linear-gradient(135deg, #0066CC 0%, #003399 100%);
   color: #fff;
   border: none;
   border-radius: 8px;
   cursor: pointer;
-  margin: 0 10px;
-  font-weight: bold;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
-  transition: transform 0.2s, box-shadow 0.2s, background-color 0.2s;
+  font-weight: 500;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.3s ease;
 }
 
 button:hover {
   transform: translateY(-2px);
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-  background-color: #008230; /* Verde mais escuro */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  background: linear-gradient(135deg, #0055AA 0%, #002277 100%);
+}
+
+button:disabled {
+  background: #ccc;
+  color: #666;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
 }
 
 /* SEÇÃO DE VALORES E PRÊMIOS */
 .prizes-container {
-  background: rgba(255, 255, 255, 0.9);
+  background: rgba(255, 255, 255, 0.95);
   border: 1px solid #ddd;
   border-radius: 12px;
-  padding: 20px;
-  margin: 24px auto;
+  padding: 25px;
+  margin: 30px auto;
   max-width: 800px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.08);
 }
 
 .prize-inputs {
@@ -114,43 +140,47 @@ button:hover {
 .prize-inputs div {
   display: flex;
   align-items: center;
-  gap: 5px;
+  gap: 8px;
   font-size: 16px;
-  color: #002776;
+  color: #003399;
 }
 
 .prize-inputs input {
   width: 100px;
   height: 40px;
   font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  padding: 0 8px;
 }
 
 #update-prizes-button {
-  background: #FFCC29;
-  color: #002776;
+  background: linear-gradient(135deg, #28a745 0%, #20c997 100%);
 }
 
 #update-prizes-button:hover {
-  background: #e6b825; /* Amarelo mais escuro */
+  background: linear-gradient(135deg, #218838 0%, #17a2b8 100%);
 }
 
 #toggle-prize-config-button {
-  background: #f0f0f0;
-  color: #333;
+  background: #f8f9fa;
+  color: #003399;
+  border: 1px solid #ddd;
   font-size: 14px;
-  padding: 8px 16px;
+  padding: 10px 20px;
   margin-top: 15px;
-  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
 }
 
 #toggle-prize-config-button:hover {
-  background: #e0e0e0; /* Cinza mais escuro */
+  background: #e9ecef;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .prize-note {
   font-size: 14px;
   font-style: italic;
-  color: #555;
+  color: #666;
   margin-top: 0;
   margin-bottom: 20px;
 }
@@ -161,41 +191,49 @@ button:hover {
   text-align: center;
 }
 
+.winning-games-actions {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+
 .highlight {
   color: #fff;
-  background: #009B3A; /* Verde */
+  background: #0066CC;
   border-radius: 50%;
   padding: 4px 10px;
   font-weight: bold;
   font-size: 1.1em;
   margin: 0 2px;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .sorteio-mark {
-  color: #009B3A;
+  color: #0066CC;
   font-weight: bold;
   margin-left: 10px;
 }
 
 #result-message {
   margin: 20px auto;
-  padding: 15px;
-  font-size: 18px;
-  font-weight: bold;
-  color: #002776; /* Azul */
-  text-shadow: none;
-  background: rgba(255, 255, 255, 0.9);
+  padding: 20px;
+  font-size: 16px;
+  font-weight: 500;
+  color: #003399;
+  background: rgba(255, 255, 255, 0.95);
   border: 1px solid #ddd;
   border-radius: 12px;
   max-width: 800px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.08);
 }
 
 #result-message h3 {
   margin-top: 0;
   margin-bottom: 10px;
-  font-size: 22px;
+  font-size: 20px;
 }
 
 #result-message div {
@@ -208,25 +246,37 @@ button:hover {
 
 .output-section h3 {
   margin-bottom: 10px;
-  color: #002776; /* Azul */
-  text-shadow: none;
+  color: #003399;
+  font-weight: 500;
 }
 
 .output-section div {
   margin-bottom: 10px;
-  padding: 12px;
+  padding: 15px;
   background: #fff;
   border-radius: 8px;
   color: #333;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
   text-align: left;
+}
+
+.game-line-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.game-checkbox {
+  width: 18px;
+  height: 18px;
+  accent-color: #0066CC;
 }
 
 /* Estilo genérico para os totais */
 [id^="total-"] {
-  font-weight: bold;
+  font-weight: 500;
   margin-top: 5px;
-  color: #002776; /* Azul */
+  color: #003399;
   background: transparent !important;
   box-shadow: none !important;
   padding-left: 0 !important;
@@ -234,56 +284,65 @@ button:hover {
 
 .jogo-id {
   font-size: 1.1rem;
-  font-weight: bold;
-  color: #009B3A; /* Verde */
+  font-weight: 600;
+  color: #0066CC;
   margin-right: 10px;
 }
 
 .prize-details {
   font-size: 0.9rem;
-  color: #555;
+  color: #666;
   margin-left: 10px;
   font-style: italic;
+}
+
+.game-prize-summary {
+  font-weight: 500;
+  color: #003399;
+  margin-top: 8px;
+  padding-top: 8px;
+  border-top: 1px solid #eee;
 }
 
 #all-games {
   max-height: 320px;
   overflow-y: auto;
-  padding: 12px;
+  padding: 15px;
   background: #fff;
   border-radius: 8px;
   color: #333;
-  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
 }
 
 #all-games-container {
-  padding: 12px;
+  padding: 15px;
   background: #fff;
   border-radius: 8px;
   color: #333;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
   text-align: left;
 }
 
 .summary-section {
   margin-top: 40px;
-  padding: 20px;
+  padding: 25px;
   background: #fff;
   border-radius: 12px;
   max-width: 800px;
   margin-left: auto;
   margin-right: auto;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.08);
 }
 
 .summary-section h3 {
   margin-top: 0;
+  color: #003399;
 }
 
 #total-prize {
-  font-size: 22px;
-  font-weight: bold;
-  color: #009B3A;
+  font-size: 24px;
+  font-weight: 600;
+  color: #0066CC;
   background: transparent !important;
   box-shadow: none !important;
   text-align: center;
@@ -308,12 +367,12 @@ button:hover {
 }
 
 .breakdown-label {
-  font-weight: bold;
-  color: #002776;
+  font-weight: 500;
+  color: #003399;
 }
 
 .breakdown-value {
-  color: #009B3A;
+  color: #0066CC;
 }
 
 /* ELEMENTOS DECORATIVOS */
@@ -322,7 +381,7 @@ body::before {
   content: "";
   display: block;
   width: 100vw;
-  height: 10px; /* Mais sutil */
+  height: 10px;
   background: linear-gradient(90deg, #009B3A 50%, #FFCC29 50%);
   position: fixed;
   top: 0;
@@ -334,23 +393,23 @@ body::before {
 /* Responsividade para telas menores */
 @media screen and (max-width: 768px) {
   body {
-    font-size: 16px;
-    padding: 10px;
-    padding-top: 20px;
+    font-size: 14px;
+    padding: 15px;
+    padding-top: 25px;
   }
 
   h1 {
     font-size: 24px;
-    padding: 10px 0;
+    padding: 12px 0;
   }
 
   h2 {
-    font-size: 20px;
+    font-size: 18px;
   }
 
   .sorteio-container {
-    padding: 15px;
-    margin: 15px auto;
+    padding: 20px;
+    margin: 20px auto;
     max-width: 95%;
   }
 
@@ -361,18 +420,18 @@ body::before {
   input[type="number"] {
     width: 45px;
     height: 45px;
-    font-size: 18px;
+    font-size: 16px;
   }
 
   button {
     padding: 10px 18px;
-    font-size: 16px;
+    font-size: 14px;
     margin: 8px 5px;
   }
 
   .prizes-container {
-    padding: 15px;
-    margin: 15px auto;
+    padding: 20px;
+    margin: 20px auto;
     max-width: 95%;
   }
 
@@ -392,11 +451,16 @@ body::before {
 
   .output-section div {
     font-size: 14px;
-    padding: 8px;
+    padding: 10px;
   }
 
   #all-games {
     max-height: 200px;
     font-size: 14px;
+  }
+
+  .winning-games-actions {
+    flex-direction: column;
+    gap: 10px;
   }
 }
